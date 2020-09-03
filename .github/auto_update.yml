@@ -1,0 +1,26 @@
+name: Update incident
+on:
+  schedule:
+  - cron: "*/5 * * * *"
+
+jobs:
+  perform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install packages
+      run: npm ci
+    - name: Run script
+      run: npm start
+    - name: Commit and push if changed
+      run: |
+        git add .
+        git diff
+        git config --global user.email "github-action-bot@example.com"
+        git config --global user.name "GitHub Action Bot"
+        git commit -m "Updated incident" -a || echo "No changes to commit"
+        git push
