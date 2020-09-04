@@ -1,4 +1,4 @@
-# Playcourt Tricks
+# Playcourt Tricks [Live Page](https://fahminlb33.github.io/playcourt-tricks/)
 
 ![Node.js CI](https://github.com/fahminlb33/playcourt-tricks/workflows/Node.js%20CI/badge.svg)
 
