@@ -1,0 +1,47 @@
+[
+    {
+        "uri": "https://gitlab.playcourt.id",
+        "desc": "Gitlab",
+        "env": "production"
+    },
+    {
+        "uri": "https://dev-minio.logeetrans.com",
+        "desc": "logee-minio",
+        "env": "development"
+    },
+    {
+        "uri": "https://dev-api.logeetrans.com/user",
+        "desc": "logee-user",
+        "env": "development"
+    },
+    {
+        "uri": "https://dev-api.logeetrans.com/order",
+        "desc": "logee-order",
+        "env": "development"
+    },
+    {
+        "uri": "https://dev-api.logeetrans.com/truck",
+        "desc": "logee-truck",
+        "env": "development"
+    },
+    {
+        "uri": "https://dev-api.logeetrans.com/cargo",
+        "desc": "logee-cargo",
+        "env": "development"
+    },
+    {
+        "uri": "https://dev-api.logeetrans.com/billing",
+        "desc": "logee-billing",
+        "env": "development"
+    },
+    {
+        "uri": "https://123.231.237.18:12057/KojaTerminalServiceUAT/KojaServices?wsdl",
+        "desc": "koja-wsdl",
+        "env": "development"
+    },
+    {
+        "uri": "http://123.231.237.19:12057/KojaTerminalService/KojaServices?wsdl",
+        "desc": "koja-wsdl",
+        "env": "production"
+    }
+]
