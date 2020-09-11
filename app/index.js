@@ -12,6 +12,7 @@ const main = async () => {
     const monitoredUrls = JSON.parse(fs.readFileSync('data/monitored.json', 'utf-8'));
    
     // run request
+    console.log("Checking services...");
     for (let i = 0; i < monitoredUrls.length; i++)
     {
         const item = monitoredUrls[i];
@@ -21,6 +22,7 @@ const main = async () => {
                 url: item.uri, 
                 responseType: 'text',
                 transformResponse: [],
+                timeout: 1000 * 5,
                 headers: {
                     'User-Agent': config.userAgent
                 }
@@ -51,6 +53,7 @@ const main = async () => {
     }
 
     // load latest data
+    console.log("Fetching last data...");
     const lastIncidentData = fs.readFileSync('data/last_incident.json', 'utf-8');
     let lastIncident;
     if (lastIncidentData)
@@ -68,6 +71,7 @@ const main = async () => {
     }
 
     // save global result
+    console.log("Checking latest incident...");
     const allOk = checkResult.every(x => x.status === "ok");
     if (!allOk && lastIncident.status == "ok") {
         const repos = checkResult.filter(x => x.status === "error").map(y => `${y.desc}:${y.env}`);
@@ -81,6 +85,7 @@ const main = async () => {
     }
 
     // save services status
+    console.log("Saving incidents...");
     checkResult.forEach(item => {
         const currentServiceIndex = lastIncident.services.findIndex(x => x.desc == item.desc && x.env == item.env);
         const currentService = lastIncident.services[currentServiceIndex];
@@ -117,6 +122,7 @@ const main = async () => {
     });
 
     // save updated data
+    console.log("Serializing...");
     fs.writeFileSync('data/last_incident.json', JSON.stringify(lastIncident, null, 2));
 }
 
