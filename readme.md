@@ -14,8 +14,9 @@ A single page counter which showcases latest incident on Playcourt.
 
 - Time counter.
 - Latest incident info.
-- JS app to checkk for downtime.
+- JS app to check for downtime.
 - Workflow file to execute JS app and commit new changes.
+- Vuejs SPA.
 
 ## 🏗 The architecture
 
@@ -26,7 +27,9 @@ commiting the newly updated file to git.
 ## 👻 What I've used in this repo
 
 - Axios
-- NodeJS
+- VueJS
+- Bulma CSS
+- NodeJS 12
 - Github Actions
 
 ## 🏃‍ Running locally
