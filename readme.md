@@ -32,6 +32,14 @@ commiting the newly updated file to git.
 - NodeJS 12
 - Github Actions
 
+## ➕ Adding service to monitor
+
+1. Fork this repo.
+2. Add your service to `monitored.json`.
+3. Create pull request.
+
+I'll review as soon as I can, you can PM me if you want it to be reviewed quickly!
+
 ## 🏃‍ Running locally
 
 Clone this repo, and run:
