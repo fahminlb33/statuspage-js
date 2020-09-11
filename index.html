@@ -6,32 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playpocalypse - Playcourt Tricks</title>
 
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"
+        integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>DAYS SINCE PLAYCOURT TRICKS</h1>
+    <div id="app">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <h1 class="title is-spaced">DAYS SINCE PLAYCOURT TRICKS</h1>                      
+                        <div class="columns">
+                            <div class="column is-2 is-offset-2"></div>
+                            <div class="column is-1">
+                                <p class="subtitle is-1">{{ clock?.days }}</p>
+                                <p class="subtitle is-6">DAYS</p>
+                            </div>
+                            <div class="column is-1">
+                                <p class="subtitle is-1">{{ clock?.hours }}</p>
+                                <p class="subtitle is-6">HOURS</p>
+                            </div>
+                            <div class="column is-1">
+                                <p class="subtitle is-1">{{ clock?.minutes }}</p>
+                                <p class="subtitle is-6">MINUTES</p>
+                            </div>
+                            <div class="column is-1">
+                                <p class="subtitle is-1">{{ clock?.seconds }}</p>
+                                <p class="subtitle is-6">SECONDS</p>
+                            </div>
+                        </div>
 
-        <ul>
-            <li><span id="days"></span>days</li>
-            <li><span id="hours"></span>Hours</li>
-            <li><span id="minutes"></span>Minutes</li>
-            <li><span id="seconds"></span>Seconds</li>
-        </ul>
+                        <h2 class="subtitle mt-4">Latest incident:<br>{{ incident }}</h2
+                    </div>
+                </div>
+            </section>
 
-        <div class="incident">
-            <h2>Latest Incident:</h2>
-            <p id="latest_incident">HELLO</p>
+            <section class="section">
+                <div class="container">
+                    <h2 class="title has-text-centered mb-6">Services</h2>
+                    
+                    <table class="table is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Environment</th>
+                                <th>Incidents</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="service in services">
+                                <td>{{ service.desc }}</td>
+                                <td><span class="tag" v-bind:class="{ 'is-success': service.status === 'ok', 'is-danger': service.status === 'error' }">{{ service.status }}</span></td>
+                                <td>{{ service.env }}</td>
+                                <td>
+                                    <ul v-for="incident in service.incidents">
+                                        <li>{{ prettyDate(incident.date) }}, {{ statusToMessage(incident.status) }}</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
-
-        <footer>
-            5 hour project by fahminlb33
-            <p>HTML template by <a href="https://codepen.io/AllThingsSmitty/pen/JJavZN"> Matt Smith</a>
-        </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js" integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw==" crossorigin="anonymous"></script> -->
     <script src="static/app.js"></script>
 </body>
 
