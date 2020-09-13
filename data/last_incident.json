@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-13T16:21:02.117Z",
-  "incident": "Gitlab:production, logee-minio:development, logee-user:development, logee-order:development, logee-truck:development, logee-cargo:development, logee-billing:development, koja-wsdl:development is down.",
+  "date": "2020-09-13T16:43:06.414Z",
+  "incident": "Gitlab:production, logee-minio:development, logee-order:development, logee-truck:development, logee-cargo:development, logee-billing:development, koja-wsdl:development is down.",
   "status": "error",
   "services": [
     {
@@ -75,8 +75,12 @@
     {
       "desc": "logee-user",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:43:04.295Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T16:21:02.114Z",
           "status": "error"
