@@ -6,7 +6,7 @@
     {
       "desc": "Gitlab",
       "env": "production",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:43.593Z",
@@ -45,7 +45,7 @@
     {
       "desc": "logee-minio",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T07:44:16.047Z",
@@ -92,7 +92,7 @@
     {
       "desc": "logee-user",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:48.598Z",
@@ -123,7 +123,7 @@
     {
       "desc": "logee-order",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:51.070Z",
@@ -162,7 +162,7 @@
     {
       "desc": "logee-truck",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:52.135Z",
@@ -201,7 +201,7 @@
     {
       "desc": "logee-cargo",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:54.590Z",
@@ -232,7 +232,7 @@
     {
       "desc": "logee-billing",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
         {
           "date": "2020-09-11T01:03:56.534Z",
