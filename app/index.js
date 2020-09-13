@@ -75,12 +75,12 @@ const main = async () => {
     // save global result
     console.log("Checking latest incident...");
     const allOk = checkResult.every(x => x.status === "ok");
-    if (!allOk && lastIncident.status == "ok") {
+    if (!allOk && lastIncident.status === "ok") {
         const repos = checkResult.filter(x => x.status === "error").map(y => `${y.desc}:${y.env}`);
         lastIncident.date = new Date().toISOString();
         lastIncident.incident = `${repos.join(', ')} is down.`;
         lastIncident.status = "error";
-    } else if (allOk && lastIncident.status == "error") {
+    } else if (allOk && lastIncident.status === "error") {
         lastIncident.date = new Date().toISOString();
         lastIncident.incident = `All monitored service is up.`;
         lastIncident.status = "ok";
