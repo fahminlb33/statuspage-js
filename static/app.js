@@ -14,10 +14,16 @@ var app = new Vue({
     },
     methods: {
         updateData() {
-            axios({
+            const opt = {
                 url: "data/last_incident.json?nokey=" + Math.random() * 1000,
-                responseType: "json"
-            }).then(response => {
+                responseType: "json",
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
+                }
+            };
+            axios(opt).then(response => {
                 const latestData = response.data;
                 this.date = new Date(latestData.date);
                 this.incident = latestData.incident;
