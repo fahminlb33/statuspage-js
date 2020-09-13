@@ -3,7 +3,7 @@ const axios = require('axios').default;
 
 // configs
 const config = Object.freeze({
-    maxIncidents: 10,
+    maxIncidents: 6,
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36 Edg/85.0.564.44'
 });
 
@@ -110,16 +110,16 @@ const main = async () => {
         }
         else
         {
-            const currentServiceLastIncident = currentService.incidents[currentService.incidents.length - 1];
+            const currentServiceLastIncident = currentService.incidents[0];
             currentService.status = item.status;
             if (currentServiceLastIncident.status !== item.status)
             {
                 if (lastIncident.services[currentServiceIndex].incidents.length >= config.maxIncidents) 
                 {
-                    lastIncident.services[currentServiceIndex].incidents.shift();
+                    lastIncident.services[currentServiceIndex].incidents.pop();
                 }
 
-                lastIncident.services[currentServiceIndex].incidents.push({
+                lastIncident.services[currentServiceIndex].incidents.unshift({
                     date: item.date,
                     status: item.status
                 });
