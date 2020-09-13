@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-13T13:25:30.084Z",
-  "incident": "koja-wsdl:development is down.",
+  "date": "2020-09-13T14:02:23.855Z",
+  "incident": "Gitlab:production, logee-minio:development, logee-user:development, logee-order:development, logee-truck:development, logee-cargo:development, logee-billing:development, koja-wsdl:development is down.",
   "status": "error",
   "services": [
     {
@@ -17,8 +17,12 @@
     {
       "desc": "Gitlab",
       "env": "production",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.853Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:27.786Z",
           "status": "ok"
@@ -32,8 +36,12 @@
     {
       "desc": "logee-minio",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.853Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:27.332Z",
           "status": "ok"
@@ -47,8 +55,12 @@
     {
       "desc": "logee-user",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:26.263Z",
           "status": "ok"
@@ -62,8 +74,12 @@
     {
       "desc": "logee-order",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:26.206Z",
           "status": "ok"
@@ -77,8 +93,12 @@
     {
       "desc": "logee-truck",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:26.258Z",
           "status": "ok"
@@ -92,8 +112,12 @@
     {
       "desc": "logee-cargo",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:26.265Z",
           "status": "ok"
@@ -107,8 +131,12 @@
     {
       "desc": "logee-billing",
       "env": "development",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-13T13:25:26.296Z",
           "status": "ok"
