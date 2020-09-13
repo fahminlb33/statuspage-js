@@ -15,7 +15,7 @@ var app = new Vue({
     methods: {
         updateData() {
             axios({
-                url: "data/last_incident.json",
+                url: "data/last_incident.json?nokey=" + Math.random() * 1000,
                 responseType: "json"
             }).then(response => {
                 const latestData = response.data;
