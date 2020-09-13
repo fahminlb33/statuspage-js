@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-11T01:04:28.389Z",
-  "incident": "koja-wsdl:development is down.",
+  "date": "2020-09-13T12:38:09.478Z",
+  "incident": "Gitlab:production, logee-minio:development, logee-user:development, logee-order:development, logee-truck:development, logee-cargo:development, logee-billing:development, koja-wsdl:development is down.",
   "status": "error",
   "services": [
     {
