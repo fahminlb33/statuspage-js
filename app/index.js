@@ -8,29 +8,28 @@ const config = Object.freeze({
 });
 
 const main = async () => {
-    const checkResult = [];
-    const monitoredUrls = JSON.parse(fs.readFileSync('data/monitored.json', 'utf-8'));
-   
+   const monitoredUrls = JSON.parse(fs.readFileSync('data/monitored.json', 'utf-8'));
+   const checkResult = [];
+   const reqs = [];
+
     // run request
     console.log("Checking services...");
     for (let i = 0; i < monitoredUrls.length; i++)
     {
         const item = monitoredUrls[i];
+        const opt = {
+            url: item.uri, 
+            responseType: 'text',
+            transformResponse: [],
+            timeout: 1000 * 5,
+            headers: {
+                'User-Agent': config.userAgent
+            }
+        };
 
-        try {
-            const opt = {
-                url: item.uri, 
-                responseType: 'text',
-                transformResponse: [],
-                timeout: 1000 * 5,
-                headers: {
-                    'User-Agent': config.userAgent
-                }
-            };
-
-            console.debug(`Checking ${item.desc}, env: ${item.env}`);
-            const response = await axios(opt);
-            if (!response.data || response.data.includes("Application is not available")) {
+        console.debug(`Checking ${item.desc}, env: ${item.env}`);
+        const req = axios(opt).then(response => {
+            if (response.status >= 400 || !response.data || response.data.includes("Application is not available")) {
                 checkResult.push({
                     ...item,
                     status: "error",
@@ -43,14 +42,17 @@ const main = async () => {
                     date: new Date().toISOString()
                 });
             }
-        } catch (error) {
+        }).catch(_ => {
             checkResult.push({
                 ...item,
                 status: "error",
                 date: new Date().toISOString()
             });
-        }
+        });
+        reqs.push(req);
     }
+
+    await Promise.all(reqs);
 
     // load latest data
     console.log("Fetching last data...");
@@ -106,6 +108,7 @@ const main = async () => {
         else
         {
             const currentServiceLastIncident = currentService.incidents[currentService.incidents.length - 1];
+            currentService.status = item.status;
             if (currentServiceLastIncident.status !== item.status)
             {
                 if (lastIncident.services[currentServiceIndex].incidents.length >= config.maxIncidents) 
