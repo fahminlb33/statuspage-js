@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-13T12:55:41.447Z",
-  "incident": "Gitlab:production, logee-minio:development, logee-user:development, logee-order:development, logee-truck:development, logee-cargo:development, logee-billing:development, koja-wsdl:development is down.",
+  "date": "2020-09-13T16:56:43.475Z",
+  "incident": "koja-wsdl:development is down.",
   "status": "error",
   "services": [
     {
@@ -17,10 +17,30 @@
     {
       "desc": "Gitlab",
       "env": "production",
-      "status": "error",
+      "status": "ok",
       "incidents": [
         {
-          "date": "2020-09-13T12:55:41.446Z",
+          "date": "2020-09-13T16:56:41.254Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.114Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T15:38:45.578Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T15:31:50.412Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:04.511Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.853Z",
           "status": "error"
         }
       ]
@@ -28,8 +48,28 @@
     {
       "desc": "logee-minio",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:56:40.611Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.114Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:04.052Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.853Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T13:25:27.332Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T12:55:41.446Z",
           "status": "error"
@@ -39,10 +79,30 @@
     {
       "desc": "logee-user",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
         {
-          "date": "2020-09-13T12:55:41.446Z",
+          "date": "2020-09-13T16:56:39.724Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:49:51.475Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T16:43:04.295Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.114Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:02.884Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.854Z",
           "status": "error"
         }
       ]
@@ -50,8 +110,28 @@
     {
       "desc": "logee-order",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:56:39.579Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.115Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:02.892Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T13:25:26.206Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T12:55:41.446Z",
           "status": "error"
@@ -61,8 +141,28 @@
     {
       "desc": "logee-truck",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:56:39.711Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.115Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:02.900Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T13:25:26.258Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T12:55:41.446Z",
           "status": "error"
@@ -72,8 +172,28 @@
     {
       "desc": "logee-cargo",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:56:39.683Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.115Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:02.937Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T13:25:26.265Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T12:55:41.446Z",
           "status": "error"
@@ -83,8 +203,28 @@
     {
       "desc": "logee-billing",
       "env": "development",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-13T16:56:39.602Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T16:21:02.115Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T14:57:02.875Z",
+          "status": "ok"
+        },
+        {
+          "date": "2020-09-13T14:02:23.854Z",
+          "status": "error"
+        },
+        {
+          "date": "2020-09-13T13:25:26.296Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-13T12:55:41.447Z",
           "status": "error"
