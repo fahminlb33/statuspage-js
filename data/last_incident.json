@@ -252,6 +252,105 @@
           "status": "ok"
         }
       ]
+    },
+    {
+      "desc": "logee-cargo",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.623Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-user",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.632Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-billing",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.671Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-order",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.681Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-truck",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.703Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "koja-wsdl",
+      "env": "prod",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:21.705Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-minio",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:22.651Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "Gitlab",
+      "env": "prod",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:23.257Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "koja-wsdl",
+      "env": "dev",
+      "status": "error",
+      "incidents": [
+        {
+          "date": "2020-09-15T02:22:25.502Z",
+          "status": "error"
+        }
+      ]
     }
   ]
 }
