@@ -21,7 +21,7 @@ A single page counter which showcases latest incident on Playcourt.
 ## 🏗 The architecture
 
 For the frontend, I use vanilla JS. To update the service status, I use JS app
-using to check for downtime and writing the output to a JSON file, then
+to check for downtime and writing the output to a JSON file, then
 commiting the newly updated file to git.
 
 ## 👻 What I've used in this repo
