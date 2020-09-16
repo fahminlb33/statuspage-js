@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-16T18:21:50.219Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-09-16T18:29:08.996Z",
+  "incident": "Smart Contract Dev:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -245,8 +245,12 @@
     {
       "desc": "Smart Contract Dev",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-16T18:29:04.071Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-14T01:30:31.390Z",
           "status": "ok"
