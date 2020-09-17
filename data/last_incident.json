@@ -1,6 +1,6 @@
 {
-  "date": "2020-09-17T08:37:02.437Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-09-17T08:43:53.613Z",
+  "incident": "logee-order:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -297,8 +297,12 @@
     {
       "desc": "logee-order",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-09-17T08:43:49.852Z",
+          "status": "error"
+        },
         {
           "date": "2020-09-15T02:22:21.681Z",
           "status": "ok"
