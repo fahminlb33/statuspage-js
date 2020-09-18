@@ -1,0 +1,117 @@
+{
+  "date": "2020-09-18T03:31:32.638Z",
+  "incident": "koja-wsdl:dev is down.",
+  "status": "error",
+  "services": [
+    {
+      "desc": "Smart Contract Dev",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:27.782Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-truck",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:28.786Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-billing",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:28.802Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-cargo",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:28.805Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-order",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:28.814Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-user",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:28.845Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "koja-wsdl",
+      "env": "prod",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:29.558Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "logee-minio",
+      "env": "dev",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:29.926Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "Gitlab",
+      "env": "prod",
+      "status": "ok",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:30.535Z",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "desc": "koja-wsdl",
+      "env": "dev",
+      "status": "error",
+      "incidents": [
+        {
+          "date": "2020-09-18T03:31:32.638Z",
+          "status": "error"
+        }
+      ]
+    }
+  ]
+}
