@@ -1,13 +1,17 @@
 {
-  "date": "2020-09-30T23:26:13.790Z",
-  "incident": "logee-truck:dev, koja-wsdl:dev, Smart Contract Dev:dev is down.",
+  "date": "2020-09-30T23:33:34.621Z",
+  "incident": "koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
       "desc": "Smart Contract Dev",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-30T23:33:29.703Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-30T23:26:13.789Z",
           "status": "error"
@@ -29,8 +33,12 @@
     {
       "desc": "logee-truck",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-09-30T23:33:30.842Z",
+          "status": "ok"
+        },
         {
           "date": "2020-09-30T23:26:13.789Z",
           "status": "error"
