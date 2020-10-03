@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-03T05:37:58.079Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-10-03T05:44:58.142Z",
+  "incident": "logee-cargo:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -83,8 +83,12 @@
     {
       "desc": "logee-cargo",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-03T05:44:58.140Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-03T04:11:20.927Z",
           "status": "ok"
