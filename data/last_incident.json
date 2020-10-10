@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-10T05:17:25.552Z",
-  "incident": "logee-minio:dev, logee-user:dev, koja-wsdl:dev is down.",
+  "date": "2020-10-10T05:35:22.878Z",
+  "incident": "koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -157,8 +157,12 @@
     {
       "desc": "logee-user",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-10T05:35:22.209Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-10T05:27:21.924Z",
           "status": "error"
@@ -178,10 +182,6 @@
         {
           "date": "2020-10-10T04:04:02.158Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-09T13:57:24.633Z",
-          "status": "ok"
         }
       ]
     },
@@ -219,8 +219,12 @@
     {
       "desc": "logee-minio",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-10T05:35:21.636Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-10T05:17:25.550Z",
           "status": "error"
@@ -240,10 +244,6 @@
         {
           "date": "2020-10-10T03:54:09.128Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-09T13:57:26.482Z",
-          "status": "ok"
         }
       ]
     },
