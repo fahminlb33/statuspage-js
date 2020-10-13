@@ -1,6 +1,6 @@
 {
   "date": "2020-10-13T07:25:16.796Z",
-  "incident": "Gitlab:prod, logee-cargo:dev, logee-billing:dev, logee-user:dev, logee-order:dev, logee-truck:dev, logee-minio:dev, koja-wsdl:dev is down.",
+  "incident": "logee-truck:dev, logee-billing:dev, logee-minio:dev, logee-order:dev, Gitlab:prod, logee-cargo:dev, logee-user:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
