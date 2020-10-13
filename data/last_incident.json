@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-13T04:41:55.513Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-10-13T04:55:36.529Z",
+  "incident": "logee-billing:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -64,8 +64,12 @@
     {
       "desc": "logee-billing",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-13T04:55:36.527Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-13T04:41:52.378Z",
           "status": "ok"
@@ -85,10 +89,6 @@
         {
           "date": "2020-10-12T03:26:13.319Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-12T03:08:30.355Z",
-          "status": "error"
         }
       ]
     },
