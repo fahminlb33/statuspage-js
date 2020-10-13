@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-13T06:07:44.979Z",
-  "incident": "logee-minio:dev, logee-billing:dev, logee-cargo:dev, logee-order:dev, logee-truck:dev, Gitlab:prod, logee-user:dev, koja-wsdl:dev is down.",
+  "date": "2020-10-13T06:29:16.853Z",
+  "incident": "logee-user:dev, logee-billing:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -33,8 +33,12 @@
     {
       "desc": "logee-truck",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-13T06:29:13.031Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-13T06:07:40.346Z",
           "status": "error"
@@ -54,10 +58,6 @@
         {
           "date": "2020-10-12T10:24:09.569Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-12T07:44:49.405Z",
-          "status": "ok"
         }
       ]
     },
@@ -95,8 +95,12 @@
     {
       "desc": "logee-cargo",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-13T06:29:13.830Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-13T06:07:40.338Z",
           "status": "error"
@@ -116,18 +120,18 @@
         {
           "date": "2020-10-12T07:51:49.200Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-12T07:38:13.483Z",
-          "status": "ok"
         }
       ]
     },
     {
       "desc": "logee-order",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-13T06:29:13.039Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-13T06:07:40.342Z",
           "status": "error"
@@ -147,10 +151,6 @@
         {
           "date": "2020-10-12T15:39:20.352Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-12T13:44:20.714Z",
-          "status": "ok"
         }
       ]
     },
@@ -219,8 +219,12 @@
     {
       "desc": "logee-minio",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-13T06:29:13.276Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-13T06:07:40.263Z",
           "status": "error"
@@ -240,18 +244,18 @@
         {
           "date": "2020-10-13T02:41:50.514Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-12T13:57:50.131Z",
-          "status": "ok"
         }
       ]
     },
     {
       "desc": "Gitlab",
       "env": "prod",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-13T06:29:14.619Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-13T06:07:40.379Z",
           "status": "error"
@@ -271,10 +275,6 @@
         {
           "date": "2020-10-13T03:10:28.965Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-12T19:38:16.250Z",
-          "status": "ok"
         }
       ]
     },
