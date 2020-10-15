@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-15T16:43:18.472Z",
-  "incident": "Gitlab:prod, logee-minio:dev, koja-wsdl:dev is down.",
+  "date": "2020-10-15T16:49:36.507Z",
+  "incident": "koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -219,8 +219,12 @@
     {
       "desc": "logee-minio",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-15T16:49:33.661Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-15T16:43:18.471Z",
           "status": "error"
@@ -240,18 +244,18 @@
         {
           "date": "2020-10-15T13:39:24.199Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-15T13:31:54.972Z",
-          "status": "ok"
         }
       ]
     },
     {
       "desc": "Gitlab",
       "env": "prod",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-15T16:49:34.302Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-15T16:43:18.471Z",
           "status": "error"
@@ -271,10 +275,6 @@
         {
           "date": "2020-10-13T07:25:12.171Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-13T06:29:14.619Z",
-          "status": "ok"
         }
       ]
     },
