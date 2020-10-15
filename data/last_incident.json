@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-15T13:31:57.751Z",
-  "incident": "logee-truck:dev, koja-wsdl:dev is down.",
+  "date": "2020-10-15T13:39:24.201Z",
+  "incident": "logee-minio:dev, logee-user:dev, logee-order:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -33,8 +33,12 @@
     {
       "desc": "logee-truck",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-15T13:39:24.138Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-15T13:31:57.750Z",
           "status": "error"
@@ -54,10 +58,6 @@
         {
           "date": "2020-10-15T11:30:22.043Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-14T14:44:29.414Z",
-          "status": "ok"
         }
       ]
     },
@@ -126,8 +126,12 @@
     {
       "desc": "logee-order",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-15T13:39:24.200Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-15T13:31:54.951Z",
           "status": "ok"
@@ -147,18 +151,18 @@
         {
           "date": "2020-10-13T08:00:33.742Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-13T07:53:23.573Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "logee-user",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-15T13:39:24.199Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-15T13:23:44.422Z",
           "status": "ok"
@@ -178,10 +182,6 @@
         {
           "date": "2020-10-14T14:44:29.364Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-14T14:36:29.824Z",
-          "status": "error"
         }
       ]
     },
@@ -219,8 +219,12 @@
     {
       "desc": "logee-minio",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-15T13:39:24.199Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-15T13:31:54.972Z",
           "status": "ok"
@@ -240,10 +244,6 @@
         {
           "date": "2020-10-15T11:52:08.972Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-15T11:45:15.515Z",
-          "status": "error"
         }
       ]
     },
