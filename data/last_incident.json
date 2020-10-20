@@ -1,6 +1,6 @@
 {
   "date": "2020-10-20T09:17:48.006Z",
-  "incident": "logee-order:dev, logee-user:dev, koja-wsdl:dev is down.",
+  "incident": "logee-user:dev, logee-order:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
