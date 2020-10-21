@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-21T01:44:41.195Z",
-  "incident": "logee-minio:dev, logee-user:dev, logee-cargo:dev, koja-wsdl:dev is down.",
+  "date": "2020-10-21T02:42:35.123Z",
+  "incident": "logee-minio:dev, logee-user:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -95,8 +95,12 @@
     {
       "desc": "logee-cargo",
       "env": "dev",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-10-21T02:42:32.514Z",
+          "status": "ok"
+        },
         {
           "date": "2020-10-21T02:34:27.972Z",
           "status": "error"
@@ -116,10 +120,6 @@
         {
           "date": "2020-10-20T23:31:32.331Z",
           "status": "error"
-        },
-        {
-          "date": "2020-10-20T23:22:39.658Z",
-          "status": "ok"
         }
       ]
     },
