@@ -1,6 +1,6 @@
 {
-  "date": "2020-10-28T07:27:18.861Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-10-28T08:52:48.819Z",
+  "incident": "Gitlab:prod, logee-minio:dev, logee-user:dev, logee-order:dev, logee-truck:dev, logee-cargo:dev, logee-billing:dev, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -33,8 +33,12 @@
     {
       "desc": "logee-truck",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.818Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-21T03:17:35.936Z",
           "status": "ok"
@@ -54,18 +58,18 @@
         {
           "date": "2020-10-21T00:05:44.628Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-20T23:53:59.917Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "logee-billing",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.818Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-27T03:53:33.296Z",
           "status": "ok"
@@ -85,18 +89,18 @@
         {
           "date": "2020-10-21T03:46:12.620Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-21T03:32:07.451Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "logee-cargo",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.818Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-21T06:57:13.665Z",
           "status": "ok"
@@ -116,18 +120,18 @@
         {
           "date": "2020-10-21T01:57:25.760Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-20T23:47:03.627Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "logee-order",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.818Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-21T07:22:46.945Z",
           "status": "ok"
@@ -147,18 +151,18 @@
         {
           "date": "2020-10-21T03:17:36.278Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-21T02:49:47.927Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "logee-user",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.817Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-22T06:09:08.766Z",
           "status": "ok"
@@ -178,10 +182,6 @@
         {
           "date": "2020-10-21T03:17:35.352Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-21T01:57:26.671Z",
-          "status": "error"
         }
       ]
     },
@@ -219,8 +219,12 @@
     {
       "desc": "logee-minio",
       "env": "dev",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.817Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-25T23:36:29.656Z",
           "status": "ok"
@@ -240,18 +244,18 @@
         {
           "date": "2020-10-21T03:56:27.859Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-21T03:32:07.450Z",
-          "status": "error"
         }
       ]
     },
     {
       "desc": "Gitlab",
       "env": "prod",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-10-28T08:52:48.817Z",
+          "status": "error"
+        },
         {
           "date": "2020-10-20T04:29:49.159Z",
           "status": "ok"
@@ -271,10 +275,6 @@
         {
           "date": "2020-10-18T13:51:59.321Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-10-18T13:44:55.349Z",
-          "status": "error"
         }
       ]
     },
