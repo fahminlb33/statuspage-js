@@ -1,6 +1,6 @@
 {
   "date": "2020-10-28T01:13:22.874Z",
-  "incident": "koja-wsdl:dev, koja-wsdl:prod is down.",
+  "incident": "koja-wsdl:prod, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
