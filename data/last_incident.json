@@ -1,6 +1,6 @@
 {
-  "date": "2020-11-20T08:08:44.544Z",
-  "incident": "koja-wsdl:dev, koja-wsdl:prod is down.",
+  "date": "2020-11-20T08:33:08.350Z",
+  "incident": "koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -188,8 +188,12 @@
     {
       "desc": "koja-wsdl",
       "env": "prod",
-      "status": "error",
+      "status": "ok",
       "incidents": [
+        {
+          "date": "2020-11-20T08:33:04.559Z",
+          "status": "ok"
+        },
         {
           "date": "2020-11-20T06:33:12.900Z",
           "status": "error"
@@ -209,10 +213,6 @@
         {
           "date": "2020-11-17T12:40:12.443Z",
           "status": "error"
-        },
-        {
-          "date": "2020-11-12T21:22:18.334Z",
-          "status": "ok"
         }
       ]
     },
