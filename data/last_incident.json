@@ -1,6 +1,6 @@
 {
-  "date": "2020-12-01T06:23:08.490Z",
-  "incident": "koja-wsdl:dev is down.",
+  "date": "2020-12-01T18:06:50.828Z",
+  "incident": "Gitlab:prod, koja-wsdl:dev is down.",
   "status": "error",
   "services": [
     {
@@ -250,8 +250,12 @@
     {
       "desc": "Gitlab",
       "env": "prod",
-      "status": "ok",
+      "status": "error",
       "incidents": [
+        {
+          "date": "2020-12-01T18:06:50.827Z",
+          "status": "error"
+        },
         {
           "date": "2020-12-01T06:23:06.740Z",
           "status": "ok"
@@ -271,10 +275,6 @@
         {
           "date": "2020-11-26T04:23:05.900Z",
           "status": "ok"
-        },
-        {
-          "date": "2020-11-26T03:59:06.298Z",
-          "status": "error"
         }
       ]
     },
