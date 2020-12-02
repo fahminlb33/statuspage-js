@@ -2,6 +2,9 @@
 
 ![Node.js CI](https://github.com/fahminlb33/playcourt-tricks/workflows/Node.js%20CI/badge.svg)
 
+  This workflow is now disabled as it piles up in my Timeline.
+  You can still clone this repo and it will run fine in your own repo.
+
 Playcourt Tricks is a day counter for latest incident from Playcourt services. Playcourt is a
 private clouod service used in my workplace, LogeeTrans. This code will execute every 5 minutes
 and checks for any downtime.
