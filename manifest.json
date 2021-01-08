@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Gitlab",
+        "uri": "https://gitlab.playcourt.id",
+        "healthCheck": "https://gitlab.playcourt.id"
+    },
+    {
+        "name": "logee-minio: dev",
+        "uri": "https://dev-minio.logeetrans.com",
+        "healthCheck": "https://dev-minio.logeetrans.com"
+    },
+    {
+        "name": "logee-user: dev",
+        "uri": "https://dev-api.logeetrans.com/user",
+        "healthCheck": "https://dev-api.logeetrans.com/user/health"
+    },
+    {
+        "name": "logee-order: dev",
+        "uri": "https://dev-api.logeetrans.com/order",
+        "healthCheck": "https://dev-api.logeetrans.com/order/health"
+    },
+    {
+        "name": "logee-truck: dev",
+        "uri": "https://dev-api.logeetrans.com/truck",
+        "healthCheck": "https://dev-api.logeetrans.com/truck/health"
+    },
+    {
+        "name": "logee-cargo: dev",
+        "uri": "https://dev-api.logeetrans.com/cargo",
+        "healthCheck": "https://dev-api.logeetrans.com/cargo/health"
+    },
+    {
+        "name": "logee-billing: dev",
+        "uri": "https://dev-api.logeetrans.com/billing",
+        "healthCheck": "https://dev-api.logeetrans.com/billing/health"
+    }
+]
