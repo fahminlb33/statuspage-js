@@ -1,88 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playpocalypse - Playcourt Tricks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"
-        integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ=="
+    <title>Playpocalypse Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
+        integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <style>
+        html,
+        body {
+            background-color: hsl(171, 100%, 41%);
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
-            <section class="hero">
-                <div class="hero-body">
-                    <div class="container has-text-centered">
-                        <h1 class="title is-spaced">DAYS SINCE PLAYCOURT TRICKS</h1>                      
-                        <div class="columns">
-                            <div class="column is-2 is-offset-2"></div>
-                            <div class="column is-1">
-                                <p class="subtitle is-1">{{ clock?.days }}</p>
-                                <p class="subtitle is-6">DAYS</p>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Playpocalypse Dashboard
+                </h1>
+                <h2 class="subtitle">
+                    <i>The service is buggy, but at least we can see what causes it.</i>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" id="app">
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <h1 class="title has-text-white">Service Liveness Monitor</h1>
+
+                    <button class="button is-warning" v-on:click="checkAll" v-bind:disabled='processing'>
+                        <span class="icon">
+                            <i class="fas fa-sync"></i>
+                        </span>
+                        <span>Refresh All Status</span>
+                    </button>
+                    <button class="button is-info" v-on:click="downloadManifest">
+                        <span class="icon">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span>Download Manifest</span>
+                    </button>
+                    <a class="button is-info" href="https://github.com/fahminlb33/playcourt-tricks">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Fork me on GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="columns is-multiline mt-5">
+                <div v-for="card in checks" class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media mb-4">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <span
+                                            v-bind:class="{ 'has-text-success': card.healthy, 'has-text-danger': !card.healthy }">
+                                            <i class="far fa-3x"
+                                                v-bind:class="{ 'fa-check-circle': card.healthy, 'fa-times-circle': !card.healthy }"></i>
+                                        </span>
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 p-0 mb-0">{{card.name}}</p>
+                                    <p>
+                                        <span class="is-6">
+                                            <a v-bind:href="card.uri">{{card.uri}}</a>
+                                        </span>
+                                    </p>
+                                    <p class="subtitle is-6">{{card.status}}</p>
+                                </div>
                             </div>
-                            <div class="column is-1">
-                                <p class="subtitle is-1">{{ clock?.hours }}</p>
-                                <p class="subtitle is-6">HOURS</p>
-                            </div>
-                            <div class="column is-1">
-                                <p class="subtitle is-1">{{ clock?.minutes }}</p>
-                                <p class="subtitle is-6">MINUTES</p>
-                            </div>
-                            <div class="column is-1">
-                                <p class="subtitle is-1">{{ clock?.seconds }}</p>
-                                <p class="subtitle is-6">SECONDS</p>
+                            <div class="content">
+                                <hr>
+                                <span v-for="component in card.components" class="ml-1">
+                                    <span class="icon"
+                                        v-bind:class="{ 'has-text-success': component.healthy, 'has-text-danger': !component.healthy }">
+                                        <i class="fas fa-dot-circle"></i>
+                                    </span>
+                                    <span>{{component.name}}</span>
+                                </span>
+                                <div class="mt-3 mb-0 pb-0">
+                                    Last checked: {{formatDate(card.lastUpdate)}}
+                                </div>
                             </div>
                         </div>
-
-                        <h2 class="subtitle mt-4">Latest incident:<br>{{ incident }}</h2
                     </div>
                 </div>
-            </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2 class="title has-text-centered mb-6">Services</h2>
-                    
-                    <table class="table is-fullwidth">
-                        <thead>
-                            <tr>
-                                <th>Service</th>
-                                <th>Status</th>
-                                <th>Environment</th>
-                                <th>Incidents</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="service in services">
-                                <td>{{ service.desc }}</td>
-                                <td><span class="tag" v-bind:class="{ 'is-success': service.status === 'ok', 'is-danger': service.status === 'error' }">{{ service.status }}</span></td>
-                                <td>{{ service.env }}</td>
-                                <td>
-                                    <ul v-for="incident in service.incidents">
-                                        <li>{{ prettyDate(incident.date) }}, {{ statusToMessage(incident.status) }}</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </div>
-    </div>
+            </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
-        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+    <!--- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
+        integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
         integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js" integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw==" crossorigin="anonymous"></script> -->
-    <script src="static/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
+        integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
+
+    <script>
+        function getManifest() {
+            const opt = {
+                url: "/api/manifest",
+                responseType: 'json'
+            };
+            return axios(opt).then(response => response.data);
+        };
+
+        function checkService(service) {
+            const opt = {
+                url: '/api/check',
+                method: 'POST',
+                responseType: '',
+                data: service
+            };
+            return axios(opt).then(response => response.data);
+        };
+
+        function sortByName(a, b) {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        };
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                checks: [],
+                processing: true
+            },
+            methods: {
+                checkAll() {
+                    this.checks = [];
+                    this.processing = true;
+
+                    getManifest().then(manifest => {
+                        const promises = manifest.map(service =>
+                            checkService(service).then(result => {
+                                this.checks.push(result);
+                            }));
+
+                        Promise.all(promises).then(() => {
+                            this.checks.sort(sortByName);
+                            this.processing = false;
+                        });
+                    });
+                },
+                downloadManifest() {
+                    window.location.href = '/api/manifest';
+                },
+                formatDate(date) {
+                    return moment(date);
+                }
+            },
+            created() {
+                this.checkAll();
+            }
+        });
+    </script>
 </body>
 
 </html>
