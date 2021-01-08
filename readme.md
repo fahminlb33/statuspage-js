@@ -1,57 +1,94 @@
-# Playcourt Tricks [Live Page](https://fahminlb33.github.io/playcourt-tricks/)
+# Playcourt Tricks
 
-![Node.js CI](https://github.com/fahminlb33/playcourt-tricks/workflows/Node.js%20CI/badge.svg)
+Playcourt Tricks is a web app dashboard for latest incident from Playcourt
+services. Playcourt is a private clouod service used in my workplace,
+Logee Trans. This app can check for service health information and provide
+a clean dashboard to inspect every service status.
 
-Playcourt Tricks is a day counter for latest incident from Playcourt services. Playcourt is a
-private clouod service used in my workplace, LogeeTrans. This code will execute every 5 minutes
-and checks for any downtime.
-
-This project is also my submission for [Dev.to Actions Hackathon](https://dev.to/fahminlb33/service-uptime-monitor-using-github-actions-2egp)!
+> For my older submission for Dev.to Github Actions Hackathon, see
+> this [commit](https://github.com/fahminlb33/playcourt-tricks/commit/e4c2053d4e6fc20fa57378e8a030fd9c710e68dc) and older ones.
+> Also, see my dev.to post [here](https://dev.to/fahminlb33/service-uptime-monitor-using-github-actions-2egp)!
 
 ## 🧐 What you'll find in this repo
 
-A single page counter which showcases latest incident on Playcourt.
+A much cleaner interface, still built using Vue and now I also used
+Bulma CSS for a nicer dashboard! This repo also contains a new backend
+service used as a middleware to check for service status from Express app.
+This is due to browser CORS policy, a web page can't connect to external
+host if the host is not complying with CORS.
 
-- Time counter.
-- Latest incident info.
-- JS app to check for downtime.
-- Workflow file to execute JS app and commit new changes.
-- Vuejs SPA.
+And I also added Docker and [healthcheck.sh](https://github.com/fahminlb33/healthcheck.sh) support!
 
 ## 🏗 The architecture
 
-For the frontend, I use vanilla JS. To update the service status, I use JS app
-to check for downtime and writing the output to a JSON file, then
-commiting the newly updated file to git.
+This app consist of two part, backend using Express and frontend using
+Vue. The backend only has two job, serving static index.html and performing
+checks by doing HTTP request using Axios.
+
+The frontend is not much a different, it still uses Axios to call the
+backend app instead of directly requesting to the designated service, well
+to solve CORS policy.
 
 ## 👻 What I've used in this repo
 
 - Axios
-- VueJS
+- Vue
 - Bulma CSS
 - NodeJS 12
-- Github Actions
+- Docker
 
-## ➕ Adding service to monitor
+## 🩺 Supported health responses
 
-1. Fork this repo.
-2. Add your service to `monitored.json`.
-3. Create pull request.
+To see your service uptime using this app, you can provide a specific
+response (JSON) to your health check response or you can just use a
+publicly acessible URI of your API.
 
-I'll review as soon as I can, you can PM me if you want it to be reviewed quickly!
+In the `manifest.json`, for the `healthCheck` field, you can supply a
+publicly accessible API (for example your frontend home page, API root,
+or anything accessible and returns 200 OK) or you can return a response
+with this format:
+
+```json
+{
+    "name": "my-api",
+    "uri": "https://myapi.com/health",
+    "status": "Service is healthy",
+    "healthy": true,
+    "lastUpdate": "2021-01-08T14:12:36Z",
+    "components": [{
+        "name": "MongoDB",
+        "healthy": true
+    }]
+}
+```
+
+Use the `healthy` field to indicate your sevice health. The `components`
+array consists of multiple components used in your service and you can
+also report those in above response. At lease one component must be
+exists in order for this response to be treated as Playpocalyse-compatible.
+
+You can see the example in my other repo, [healthcheck.sh](https://github.com/fahminlb33/healthcheck.sh).
+I've built this small JS file to provide the correct response for
+Playpocalypse. You can seamlessly integrate the health check script into
+your application.
 
 ## 🏃‍ Running locally
 
 Clone this repo, and run:
 
-``` bash
+```bash
 npm install && npm start
 ```
 
-You'll need to rerun above command to update the timer, in case of downtime or uptime.
-To view the timer, you'll need a HTTP web server, you can use any web server, for
-example:
+Then visit http://localhost:3000 to see the dashboard. Make sure you've
+added your service information to `manifest.json`, otherwise the page
+will just display blank.
+
+If you want to run it as a Docker container, you can run:
 
 ```bash
-npm install -g http-server && http-server .
+docker build -t fahminlb33/playpocalypse .
+docker run -p 3000:3080 -d fahminlb33/playpocalypse
 ```
+
+Remember to `cd` to this repo root before executing above commands!
